@@ -42,7 +42,7 @@ if ($login->isUserLoggedIn() == true) {
 <body style="background-color: #15202B;">
  <div class="container">
         <div class="card card-container" style="background-color: #0F0F0F;">
-            <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
+            <img id="profile-img" class="profile-img-card" src="https://es.calcuworld.com/wp-content/uploads/sites/2/2019/09/generador-de-nombres-de-usuario.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form method="post" accept-charset="utf-8" action="login.php" name="loginform" autocomplete="off" role="form" class="form-signin">
 			<?php

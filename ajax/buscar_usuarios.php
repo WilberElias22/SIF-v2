@@ -79,7 +79,7 @@
 			?>
 			<div class="table-responsive">
 			  <table class="table">
-				<tr  class="info">
+				<tr  class="success">
 					<th>ID</th>
 					<th>Nombres</th>
 					<th>Usuario</th>

@@ -79,7 +79,7 @@
 			?>
 			<div class="table-responsive">
 			  <table class="table">
-				<tr  class="info">
+				<tr  class="warning">
 					<th>Código</th>
 					<th>Producto</th>
 					<th>Estado</th>

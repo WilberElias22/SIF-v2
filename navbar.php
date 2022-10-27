@@ -2,7 +2,7 @@
 		if (isset($title))
 		{
 	?>
-<nav class="navbar navbar-inverse ">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">S.I.F</a>
+      <a class="navbar-brand" href="#"><ul><img src="https://cdn-icons-png.flaticon.com/128/4133/4133467.png" alt="Logo" width="24" height="24"><ul> S.I.F</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,7 @@
        </ul>
       <ul class="nav navbar-nav navbar-right">
         
-		<li><a href="login.php?logout"><i class='glyphicon glyphicon-off'></i> Salir</a></li>
+		<li><a href="login.php?logout"><i class='glyphicon glyphicon-off'></i> Cerrar Sesion</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

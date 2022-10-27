@@ -53,7 +53,7 @@
   <head>
     <?php include("head.php");?>
   </head>
-  <body style="background-color: #15202B;">
+  <body style="background-color: #15202bef;">
 	<?php
 	include("navbar.php");
 	?>  
