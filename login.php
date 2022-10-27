@@ -1,9 +1,9 @@
 <?php
 // checking for minimum PHP version
 if (version_compare(PHP_VERSION, '5.3.7', '<')) {
-    exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
+    exit("Lo sentimos, el inicio de sesión simple de PHP no se ejecuta en una versión de PHP inferior a 5.3.7.");
 } else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
-    // if you are using PHP 5.3 or PHP 5.4 you have to include the password_api_compatibility_library.php
+    // si está utilizando PHP 5.3 o PHP 5.4, debe incluir password_api_compatibility_library.php
     // (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
     require_once("libraries/password_compatibility_library.php");
 }
