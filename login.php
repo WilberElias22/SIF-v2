@@ -1,42 +1,42 @@
 <?php
-// checking for minimum PHP version
+// comprobando la versión mínima de PHP
 if (version_compare(PHP_VERSION, '5.3.7', '<')) {
     exit("Lo sentimos, el inicio de sesión simple de PHP no se ejecuta en una versión de PHP inferior a 5.3.7.");
 } else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
     // si está utilizando PHP 5.3 o PHP 5.4, debe incluir password_api_compatibility_library.php
-    // (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
+    // (esta biblioteca agrega las funciones de hashing de contraseñas de PHP 5.5 a versiones anteriores de PHP)
     require_once("libraries/password_compatibility_library.php");
 }
 
-// include the configs / constants for the database connection
+// incluir las config/constantes para la conexión de la base de datos
 require_once("config/db.php");
 
-// load the login class
+// cargar la clase de inicio de sesión
 require_once("classes/Login.php");
 
-// create a login object. when this object is created, it will do all login/logout stuff automatically
-// so this single line handles the entire login process. in consequence, you can simply ...
+// crear un objeto de inicio de sesión. cuando se crea este objeto, hará todas las cosas de inicio/cierre de sesión automáticamente
+// por lo que esta sola línea maneja todo el proceso de inicio de sesión. en consecuencia, simplemente puede -->
 $login = new Login();
 
-// ... ask if we are logged in here:
+// <-- preguntar si estamos registrados aquí:
 if ($login->isUserLoggedIn() == true) {
-    // the user is logged in. you can do whatever you want here.
-    // for demonstration purposes, we simply show the "you are logged in" view.
+    // Si el usuario está conectado. Puedes hacer lo que quieras aquí.
+    // mostramos la vista "usted ha iniciado sesión".
    header("location: facturas.php");
 
 } else {
-    // the user is not logged in. you can do whatever you want here.
-    // for demonstration purposes, we simply show the "you are not logged in" view.
+    // Si el usuario no ha iniciado sesión. Puedes hacer lo que quieras aquí.
+    // mostramos la vista "no ha iniciado sesión".
     ?>
 	<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Simple Invoice | Login</title>
-	<!-- Latest compiled and minified CSS -->
+  <title>S.I.F | Login</title>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- CSS  -->
+
    <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>

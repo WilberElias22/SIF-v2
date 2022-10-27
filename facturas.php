@@ -1,9 +1,5 @@
 <?php
-	/*-------------------------
-	Autor: INNOVAWEBSV
-	Web: www.innovawebsv.com
-	Mail: info@innovawebsv.com
-	---------------------------*/
+
 	session_start();
 	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
         header("location: login.php");
@@ -14,7 +10,7 @@
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Facturas | Simple Invoice";
+	$title="Facturas | S.I.F";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +23,10 @@
 	include("navbar.php");
 	?>  
     <div class="container">
-		<div class="panel panel-info">
+		<div class="panel panel-danger">
 		<div class="panel-heading">
 		    <div class="btn-group pull-right">
-				<a  href="nueva_factura.php" class="btn btn-info"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
+				<a  href="nueva_factura.php" class="btn btn-danger"><span class="glyphicon glyphicon-plus" ></span> Nueva Factura</a>
 			</div>
 			<h4><i class='glyphicon glyphicon-search'></i> Buscar Facturas</h4>
 		</div>
@@ -46,7 +42,7 @@
 							
 							
 							<div class="col-md-3">
-								<button type="button" class="btn btn-default" onclick='load(1);'>
+								<button type="button" class="btn btn-danger" onclick='load(1);'>
 									<span class="glyphicon glyphicon-search" ></span> Buscar</button>
 								<span id="loader"></span>
 							</div>
@@ -62,7 +58,7 @@
 		</div>	
 		
 	</div>
-	<hr>
+
 	<?php
 	include("footer.php");
 	?>

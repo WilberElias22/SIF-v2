@@ -25,11 +25,11 @@
 	include("navbar.php");
 	?>  
     <div class="container">
-	<div class="panel panel-info">
-		<div class="panel-heading">
+	<div class="panel panel-danger">
+		<div class="panel-heading ">
 			<h4><i class='glyphicon glyphicon-edit'></i> Nueva Factura</h4>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body ">
 		<?php 
 			include("modal/buscar_productos.php");
 			include("modal/registro_clientes.php");
@@ -90,16 +90,16 @@
 				
 				<div class="col-md-12">
 					<div class="pull-right">
-						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoProducto">
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#nuevoProducto">
 						 <span class="glyphicon glyphicon-plus"></span> Nuevo producto
 						</button>
-						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoCliente">
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#nuevoCliente">
 						 <span class="glyphicon glyphicon-user"></span> Nuevo cliente
 						</button>
-						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
 						 <span class="glyphicon glyphicon-search"></span> Agregar productos
 						</button>
-						<button type="submit" class="btn btn-default">
+						<button type="submit" class="btn btn-danger">
 						  <span class="glyphicon glyphicon-print"></span> Imprimir
 						</button>
 					</div>	
