@@ -12,13 +12,7 @@ define('TELEFONO_EMPRESA', '+(503) 2250-5550');
 define('EMAIL_EMPRESA', 'info@obedalvarado.pw');
 define('TAX', '13');
 
-/*-------------------------------------------------
-Los datos por defecto del usuario administrador son:
-#usuario: admin
-#contraseña: admin
-Los datos de inicio de sesion podran ser modificados 
-desde el panel de control del sistema
----------------------------------------------------*/
+
 
 
 ?>

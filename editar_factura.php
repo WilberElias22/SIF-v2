@@ -9,7 +9,7 @@
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Editar Factura | Simple Invoice";
+	$title="Editar Factura | S.I.F";
 	
 	/* Connect To Database*/
 	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
@@ -53,7 +53,7 @@
   <head>
     <?php include("head.php");?>
   </head>
-  <body>
+  <body style="background-color: #15202B;">
 	<?php
 	include("navbar.php");
 	?>  

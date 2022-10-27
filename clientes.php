@@ -14,14 +14,14 @@
 	$active_productos="";
 	$active_clientes="active";
 	$active_usuarios="";	
-	$title="Clientes | Simple Invoice";
+	$title="Clientes | S.I.F";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <?php include("head.php");?>
   </head>
-  <body>
+  <body style="background-color: #15202B;">
 	<?php
 	include("navbar.php");
 	?>
@@ -72,7 +72,7 @@
 </div>
 		 
 	</div>
-	<hr>
+
 	<?php
 	include("footer.php");
 	?>

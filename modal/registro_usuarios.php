@@ -6,11 +6,11 @@
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
-		  <div class="modal-header">
+		  <div class="modal-header" style="background-color: #DFF0D8;">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo usuario</h4>
 		  </div>
-		  <div class="modal-body">
+		  <div class="modal-body" style="background-color: #DFF0D8;">
 			<form class="form-horizontal" method="post" id="guardar_usuario" name="guardar_usuario">
 			<div id="resultados_ajax"></div>
 			  <div class="form-group">
@@ -56,7 +56,7 @@
 			 
 			
 		  </div>
-		  <div class="modal-footer">
+		  <div class="modal-footer" style="background-color: #DFF0D8;">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
 		  </div>

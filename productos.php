@@ -14,23 +14,23 @@
 	$active_productos="active";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Productos | Simple Invoice";
+	$title="Productos | S.I.F";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <?php include("head.php");?>
   </head>
-  <body>
+  <body style="background-color: #15202B;">
 	<?php
 	include("navbar.php");
 	?>
 	
     <div class="container">
-	<div class="panel panel-info">
+	<div class="panel panel-warning">
 		<div class="panel-heading">
 		    <div class="btn-group pull-right">
-				<button type='button' class="btn btn-info" data-toggle="modal" data-target="#nuevoProducto"><span class="glyphicon glyphicon-plus" ></span> Nuevo Producto</button>
+				<button type='button' class="btn btn-warning" data-toggle="modal" data-target="#nuevoProducto"><span class="glyphicon glyphicon-plus" ></span> Nuevo Producto</button>
 			</div>
 			<h4><i class='glyphicon glyphicon-search'></i> Buscar Productos</h4>
 		</div>

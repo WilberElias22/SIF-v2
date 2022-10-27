@@ -39,9 +39,9 @@ if ($login->isUserLoggedIn() == true) {
 
    <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
+<body style="background-color: #15202B;">
  <div class="container">
-        <div class="card card-container">
+        <div class="card card-container" style="background-color: #0F0F0F;">
             <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form method="post" accept-charset="utf-8" action="login.php" name="loginform" autocomplete="off" role="form" class="form-signin">

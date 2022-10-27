@@ -39,7 +39,7 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button type="submit" class="btn btn-primary" id="actualizar_datos3">Cambiar contraseña</button>
+			<button type="submit" class="btn btn-success" id="actualizar_datos3">Cambiar contraseña</button>
 		  </div>
 		  </form>
 		</div>

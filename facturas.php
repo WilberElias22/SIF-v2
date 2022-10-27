@@ -18,7 +18,7 @@
 	<?php include("head.php");?>
 
   </head>
-  <body>
+  <body style="background-color: #15202B;">
 	<?php
 	include("navbar.php");
 	?>  
