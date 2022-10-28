@@ -6,10 +6,10 @@ define('DB_PASS', 'MaNBMVdLgBSyjqcd8Fxm');//Contraseña del usuario de la base d
 define('DB_NAME', 'bj8fcdiss39lczsgsoiy');//Nombre de la base de datos
  
 /*Datos de la empresa*/
-define('NOMBRE_EMPRESA', 'SISTEMAS WEB LA');
-define('DIRECCION_EMPRESA', 'San Miguel, El Salvador, C.A.');
-define('TELEFONO_EMPRESA', '+(503) 2250-5550');
-define('EMAIL_EMPRESA', 'info@obedalvarado.pw');
+define('NOMBRE_EMPRESA', 'SIF');
+define('DIRECCION_EMPRESA', 'San Salvador, El Salvador, C.A.');
+define('TELEFONO_EMPRESA', '+(503) 2250-2525');
+define('EMAIL_EMPRESA', 'info@sif.pw');
 define('TAX', '13');
 
 
