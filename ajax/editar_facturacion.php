@@ -7,7 +7,7 @@ if (isset($_POST['id'])){$id=intval($_POST['id']);}
 if (isset($_POST['cantidad'])){$cantidad=intval($_POST['cantidad']);}
 if (isset($_POST['precio_venta'])){$precio_venta=floatval($_POST['precio_venta']);}
 
-	/* Connect To Database*/
+	/* Conectar a la base de datos*/
 	require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 	require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
 	

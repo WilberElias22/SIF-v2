@@ -16,10 +16,10 @@
 			!empty($_POST['condiciones']) &&
 			$_POST['estado_factura']!="" 
 		){
-		/* Connect To Database*/
+		/* Conectar a la base de datos*/
 		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 		require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
-		// escaping, additionally removing everything that could be (html/javascript-) code
+		// escapando, eliminando además todo lo que podría ser código (html/javascript-)
 		$id_cliente=intval($_POST['id_cliente']);
 		$id_vendedor=intval($_POST['id_vendedor']);
 		$condiciones=intval($_POST['condiciones']);

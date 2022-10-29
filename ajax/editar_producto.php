@@ -18,10 +18,10 @@
 			$_POST['mod_estado']!="" &&
 			!empty($_POST['mod_precio'])
 		){
-		/* Connect To Database*/
+		/* Conectar a la base de datos*/
 		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 		require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
-		// escaping, additionally removing everything that could be (html/javascript-) code
+		// escapando, eliminando además todo lo que podría ser código (html/javascript-)
 		$codigo=mysqli_real_escape_string($con,(strip_tags($_POST["mod_codigo"],ENT_QUOTES)));
 		$nombre=mysqli_real_escape_string($con,(strip_tags($_POST["mod_nombre"],ENT_QUOTES)));
 		$estado=intval($_POST['mod_estado']);

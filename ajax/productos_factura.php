@@ -8,7 +8,7 @@
 	
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if($action == 'ajax'){
-		// escaping, additionally removing everything that could be (html/javascript-) code
+		// escapando, eliminando además todo lo que podría ser código (html/javascript-)
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
 		 $aColumns = array('codigo_producto', 'nombre_producto');//Columnas de busqueda
 		 $sTable = "products";
@@ -23,22 +23,22 @@
 			$sWhere = substr_replace( $sWhere, "", -3 );
 			$sWhere .= ')';
 		}
-		include 'pagination.php'; //include pagination file
-		//pagination variables
+		include 'pagination.php'; //incluir archivo de paginación
+		//variables de paginación
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
-		$per_page = 5; //how much records you want to show
-		$adjacents  = 4; //gap between pages after number of adjacents
+		$per_page = 5; //cuantos registros quieres mostrar
+		$adjacents  = 4; //espacio entre páginas después del número de adyacentes
 		$offset = ($page - 1) * $per_page;
-		//Count the total number of row in your table*/
+		//Cuente el número total de filas en su tabla*/
 		$count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
 		$row= mysqli_fetch_array($count_query);
 		$numrows = $row['numrows'];
 		$total_pages = ceil($numrows/$per_page);
 		$reload = './index.php';
-		//main query to fetch the data
+		//consulta principal para obtener los datos
 		$sql="SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
 		$query = mysqli_query($con, $sql);
-		//loop through fetched data
+		//recorrer los datos obtenidos
 		if ($numrows>0){
 			
 			?>

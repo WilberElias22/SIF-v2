@@ -12,10 +12,10 @@
 			!empty($_POST['mod_nombre']) &&
 			$_POST['mod_estado']!="" 
 		){
-		/* Connect To Database*/
+		/* Conectar a la base de datos*/
 		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 		require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
-		// escaping, additionally removing everything that could be (html/javascript-) code
+		// escapando, eliminando además todo lo que podría ser código (html/javascript-)
 		$nombre=mysqli_real_escape_string($con,(strip_tags($_POST["mod_nombre"],ENT_QUOTES)));
 		$telefono=mysqli_real_escape_string($con,(strip_tags($_POST["mod_telefono"],ENT_QUOTES)));
 		$email=mysqli_real_escape_string($con,(strip_tags($_POST["mod_email"],ENT_QUOTES)));
