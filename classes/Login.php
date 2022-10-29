@@ -1,72 +1,72 @@
 <?php
 
 /**
- * Class login
- * handles the user's login and logout process
+ * Inicio de sesión de clase
+  * maneja el proceso de inicio y cierre de sesión del usuario
  */
 class Login
 {
     /**
-     * @var object The database connection
+     * @var object La conexión de la base de datos
      */
     private $db_connection = null;
     /**
-     * @var array Collection of error messages
+     * @var array Recopilación de mensajes de error.
      */
     public $errors = array();
     /**
-     * @var array Collection of success / neutral messages
+     * @var array Colección de mensajes de éxito/neutrales
      */
     public $messages = array();
 
     /**
-     * the function "__construct()" automatically starts whenever an object of this class is created,
-     * you know, when you do "$login = new Login();"
+     * la función "__construct()" se inicia automáticamente cada vez que se crea un objeto de esta clase,
+      *  cuando haces "$login = new Login();"
      */
     public function __construct()
     {
-        // create/read session, absolutely necessary
+        // Sesión de creación / lectura, absolutamente necesario
         session_start();
 
-        // check the possible login actions:
-        // if user tried to log out (happen when user clicks logout button)
+        // verifique las posibles acciones de inicio de sesión:
+        // si el usuario intentó cerrar sesión (sucede cuando el usuario hace clic en el botón de cerrar sesión)
         if (isset($_GET["logout"])) {
             $this->doLogout();
         }
-        // login via post data (if user just submitted a login form)
+        // iniciar sesión a través de datos de publicación (si el usuario acaba de enviar un formulario de inicio de sesión)
         elseif (isset($_POST["login"])) {
             $this->dologinWithPostData();
         }
     }
 
     /**
-     * log in with post data
+     * iniciar sesión con los datos de la post
      */
     private function dologinWithPostData()
     {
-        // check login form contents
+        // comprobar el contenido del formulario de inicio de sesión
         if (empty($_POST['user_name'])) {
             $this->errors[] = "Username field was empty.";
         } elseif (empty($_POST['user_password'])) {
             $this->errors[] = "Password field was empty.";
         } elseif (!empty($_POST['user_name']) && !empty($_POST['user_password'])) {
 
-            // create a database connection, using the constants from config/db.php (which we loaded in index.php)
+            // crear una conexión de base de datos, usando las constantes de config/db.php (que cargamos en index.php)
             $this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-            // change character set to utf8 and check it
+            // cambie el conjunto de caracteres a utf8 y compruébelo
             if (!$this->db_connection->set_charset("utf8")) {
                 $this->errors[] = $this->db_connection->error;
             }
 
-            // if no connection errors (= working database connection)
+            // si no hay errores de conexión (= conexión de base de datos en funcionamiento)
             if (!$this->db_connection->connect_errno) {
 
-                // escape the POST stuff
+                // escapar de las cosas POST
                 $user_name = $this->db_connection->real_escape_string($_POST['user_name']);
 
-                // database query, getting all the info of the selected user (allows login via email address in the
-                // username field)
+                // consulta de la base de datos, obteniendo toda la información del usuario seleccionado (permite iniciar sesión a través de la dirección de correo electrónico en el
+                // campo de nombre de usuario)
                 $sql = "SELECT user_id, user_name, user_email, user_password_hash
                         FROM users
                         WHERE user_name = '" . $user_name . "' OR user_email = '" . $user_name . "';";
