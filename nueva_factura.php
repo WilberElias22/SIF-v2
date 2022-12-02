@@ -99,8 +99,8 @@
 						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
 						 <span class="glyphicon glyphicon-search"></span> Agregar productos
 						</button>
-						<button type="submit" class="btn btn-danger">
-						  <span class="glyphicon glyphicon-print"></span> Imprimir
+						<button type="submit" class="btn btn-danger" >
+						  <span class="glyphicon glyphicon-saved"></span> Guardar
 						</button>
 					</div>	
 				</div>
