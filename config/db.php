@@ -1,9 +1,9 @@
 <?php
 /*Datos de conexion a la base de datos*/
-define('DB_HOST', 'bj8fcdiss39lczsgsoiy-mysql.services.clever-cloud.com');
-define('DB_USER', 'uqbzsfmkgeitpzzr');
-define('DB_PASS', 'MaNBMVdLgBSyjqcd8Fxm');
-define('DB_NAME', 'bj8fcdiss39lczsgsoiy');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'simple_invoice2');
  
 /*Datos de la empresa*/
 define('NOMBRE_EMPRESA', 'SIF');
